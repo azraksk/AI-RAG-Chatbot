@@ -45,17 +45,14 @@ Model bu metinleri vektör uzayına dönüştürerek arama işlemini daha veriml
 ## 🛠️ Kurulum
 
 1. Sanal ortamı aktif edin:
-   ```bash
-   source ~/rag_env/bin/activate
+source ~/rag_env/bin/activate
 
 
-
-
-2. Gerekli kütüphaneleri yükle.
+2. Gerekli kütüphaneleri yükleyin.
 pip install -r requirements.txt
 
 
-3. Streamlit uygulamasını çalıştır:
+3. Streamlit uygulamasını çalıştırın:
 streamlit run app.py
 
 4. Jupyter Notebook’u çalıştırmak için:
