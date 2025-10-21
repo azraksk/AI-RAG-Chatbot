@@ -30,12 +30,12 @@ Kullanılan veri seti: [Wikipedia AI Glossary](https://www.kaggle.com/datasets/a
 ```bash
 git clone https://github.com/azraksk/AI-RAG-Chatbot.git
 cd AI-RAG-Chatbot
-
+```
 
 2. Gerekli kütüphaneleri yükleyin.
 ```bash
 pip install -r requirements.txt
-
+```
 
 3. Kaggle API anahtarınızı bilgisayarınıza ekleyin:
 Kaggle’dan kaggle.json dosyasını indirin.
