@@ -15,7 +15,9 @@ Bu proje, Wikipedia AI Glossary veri setini kullanarak bir **Retrieval-Augmented
 ## Veri Seti
 Kullanılan veri seti: [Wikipedia AI Glossary](https://www.kaggle.com/datasets/antoinebourgois2/wikipedia-ai-glossary)  
 Veri seti, yapay zekâ ile ilgili terimlerin açıklamalarını içerir.
+
 **Toplama/Hazırlama:** Hazır veri seti kullanılmıştır; ek veri toplama veya temizleme yapılmamıştır.
+
 **Kullanım:** Uygulama çalıştırılırken Kaggle API üzerinden indirilir, GitHub reposuna eklenmez.
 
 ## Kullanılan Yöntemler
