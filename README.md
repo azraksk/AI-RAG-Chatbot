@@ -19,17 +19,25 @@ Veri seti, yapay zekâ ile ilgili terimlerin açıklamalarını içerir.
 **Kullanım:** Uygulama çalıştırılırken Kaggle API üzerinden indirilir, GitHub reposuna eklenmez.
 
 ## Kullanılan Yöntemler
-- **Embedding Oluşturma:** Wikipedia AI Glossary’den alınan metinler vektör uzayına dönüştürülür.  
-- **Retrieval (Sorgulama) Mekanizması:** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler bulunur.  
-- **OpenAI API ile Yanıt Üretme:** Seçilen terim açıklamaları kullanılarak doğal dil yanıtı üretilir.  
+- **Embedding Oluşturma:** Wikipedia AI Glossary’den alınan metinler vektör uzayına dönüştürülür.
+  
+- **Retrieval (Sorgulama) Mekanizması:** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler bulunur.
+  
+- **OpenAI API ile Yanıt Üretme:** Seçilen terim açıklamaları kullanılarak doğal dil yanıtı üretilir.
+  
 - **Streamlit Kullanımı:** Chatbot arayüzü Streamlit ile hazırlanmıştır.  
 
 ## Çözüm Mimarisi
 Problem: Kullanıcının AI ile ilgili teknik terim sorularına doğal dilde doğru yanıt vermek.
+
 **Mimari:**
+
 **Embedding Oluşturma:** Wikipedia AI Glossary metinleri embedding’e dönüştürülür.
+
 **Retrieval (Sorgulama):** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler seçilir.
+
 **Yanıt Üretme:** OpenAI API kullanılarak doğal dil yanıtı oluşturulur.
+
 **Web Arayüzü:** Streamlit ile kullanıcı etkileşimi sağlanır.
 
 ## Elde Edilen Sonuçlar
