@@ -1,7 +1,7 @@
 # AI-RAG Chatbot
 
 ## Projenin Amacı
-Bu proje, Wikipedia AI Glossary veri setini kullanarak bir **Retrieval-Augmented Generation (RAG) Chatbot** oluşturmayı amaçlamaktadır. Kullanıcı sorularını doğal dilde yanıtlamak ve teknik terimler hakkında bilgi vermek hedeflenmiştir.
+Bu proje, Wikipedia AI Glossary veri setini kullanarak bir --Retrieval-Augmented Generation (RAG)** Chatbot geliştirmeyi amaçlamaktadır. Chatbot, kullanıcıların AI ve makine öğrenmesi ile ilgili teknik terimleri doğal dilde sorabilmesini sağlar, veri setindeki en ilgili bilgiler önce seçilir ve ardından doğal dil modeli ile anlamlı yanıtlar üretilir. Böylece hem doğru ve anlaşılır bilgiler sunulur hem de AI terimlerini öğrenmek isteyenler için etkileşimli bir eğitim aracı oluşturulur. Uygulama, hem yerel ortamda hem de Streamlit üzerinden internette erişilebilir şekilde tasarlanmıştır.
 
 ## Geliştirme Ortamı
 **Github:** AI-RAG Chatbot
