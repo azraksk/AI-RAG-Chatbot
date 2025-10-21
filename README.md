@@ -45,17 +45,19 @@ Terminalde şu komutları çalıştırın:
 mkdir -p ~/.kaggle
 mv ~/Desktop/kaggle.json ~/.kaggle/
 chmod 600 ~/.kaggle/kaggle.json
+```
 
 4. Streamlit uygulamasını çalıştırın:
 
 ```bash
 streamlit run app.py
+```
 
 5. Jupyter Notebook’u çalıştırmak için:
 
 ```bash
 jupyter notebook
-
+```
 Notebook kernel’i rag_env olmalıdır.
 
 
