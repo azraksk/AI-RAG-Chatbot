@@ -3,3 +3,8 @@ Desktop/kaggle.json
 data/
 __pycache__/
 *.zip
+kaggle.json
+data/
+__pycache__/
+*.zip
+.ipynb_checkpoints/
