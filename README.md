@@ -1,73 +1,72 @@
-# AI RAG Chatbot 🌐
+# AI-RAG Chatbot
 
-Bu proje, **Yapay Zekâ (AI), Makine Öğrenmesi (ML)** ve **Derin Öğrenme (Deep Learning)** konularındaki soruları yanıtlayabilen bir **Retrieval-Augmented Generation (RAG)** tabanlı sohbet botu uygulamasıdır.  
-Proje, hem **Streamlit** tabanlı bir web arayüzü hem de **Jupyter Notebook** ortamında geliştirilen modelleme aşamalarını içerir.
+## Projenin Amacı
+Bu proje, Wikipedia AI Glossary veri setini kullanarak bir **Retrieval-Augmented Generation (RAG) Chatbot** oluşturmayı amaçlamaktadır. Kullanıcı sorularını doğal dilde yanıtlamak ve teknik terimler hakkında bilgi vermek hedeflenmiştir.
 
-> ⚠️ Not: Proje, `rag_env` adlı Python sanal ortamında geliştirilmiştir. Lütfen ortamı aktif ederek ve gerekli kütüphaneleri yükleyerek çalıştırın.
+## Veri Seti
+Kullanılan veri seti: [Wikipedia AI Glossary](https://www.kaggle.com/datasets/antoinebourgois2/wikipedia-ai-glossary)  
+- Veri seti, yapay zekâ ile ilgili terimlerin açıklamalarını içerir.  
+- Projede veri seti **GitHub reposuna eklenmemiştir**, uygulama çalıştırılırken Kaggle API üzerinden indirilmektedir.
 
----
+## Kullanılan Yöntemler
+- **Embedding Oluşturma:** Wikipedia AI Glossary’den alınan metinler vektör uzayına dönüştürülür.  
+- **Retrieval (Sorgulama) Mekanizması:** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler bulunur.  
+- **OpenAI API ile Yanıt Üretme:** Seçilen terim açıklamaları kullanılarak doğal dil yanıtı üretilir.  
+- **Streamlit Kullanımı:** Chatbot arayüzü Streamlit ile hazırlanmıştır.  
 
-## 🎯 Projenin Amacı
+## Elde Edilen Sonuçlar
+- Kullanıcı sorularına doğru ve anlamlı yanıtlar üretebilen bir chatbot oluşturulmuştur.  
+- Teknik terimler ve AI ile ilgili kavramlar hakkında bilgi sunabilmektedir.  
+- Uygulama hem yerel ortamda hem de internette Streamlit üzerinden çalıştırılabilir.
 
-Bu projenin amacı, **bilgi tabanlı (knowledge-grounded)** bir yapay zekâ sohbet sistemi geliştirmektir.  
-Model, dış veri kaynağından (Wikipedia AI Glossary) aldığı içerikleri kullanarak daha doğru ve açıklayıcı cevaplar üretebilmektedir.  
-Böylece model, yalnızca ezberden yanıt vermek yerine **güvenilir ve açıklamalı bilgiye dayalı** bir yanıt mekanizması sunar.
-
----
-
-## 📊 Veri Seti Hakkında
-
-Proje, **Wikipedia AI Glossary** veri setini kullanır.  
-Bu veri seti, yapay zekâ ile ilgili kavramları, tanımları ve kısa açıklamaları içeren metinlerden oluşmaktadır.  
-Model bu metinleri vektör uzayına dönüştürerek arama işlemini daha verimli hale getirir.
-
----
-
-## 🧠 Kullanılan Yöntemler
-
-- **Sentence-Transformers**: Metinleri embedding (vektör) biçimine dönüştürmek için kullanıldı.  
-- **ChromaDB**: Embedding’leri saklamak ve benzerlik tabanlı arama yapmak için kullanıldı.  
-- **Flan-T5 (Hugging Face Transformers)**: Sorgulara yanıt üretmek için küçük, hızlı ve etkili bir dil modeli olarak tercih edildi.  
-- **Streamlit**: Kullanıcıların tarayıcı üzerinden etkileşimli olarak chatbot ile iletişim kurabilmesi için arayüz sağladı.  
-- **Batch embedding** yöntemi: Büyük veri kümelerinde RAM aşımı veya kernel çökmesini önlemek için kullanıldı.
-
----
-
-## 📈 Elde Edilen Sonuçlar
-
-- Chatbot, yapay zekâ kavramlarıyla ilgili sorulara **bağlama uygun ve açıklayıcı** yanıtlar verebilmektedir.  
-- Wikipedia tabanlı sorgularda %90 oranında anlamlı sonuçlar elde edilmiştir.  
-- Flan-T5 modeli, küçük boyutuna rağmen **hızlı yanıt süresi** ve **düşük kaynak tüketimi** ile etkili performans göstermiştir.  
-- RAG yapısı sayesinde model, klasik dil modellerine göre **daha bilgi temelli cevaplar** üretmektedir.
+## Canlı Web Uygulaması
+[AI-RAG Chatbot Web](https://ai-rag-chatbot-yusraazrademirel.streamlit.app)
 
 ---
 
 ## 🛠️ Kurulum
 
-1. Sanal ortamı aktif edin:
-source ~/rag_env/bin/activate
+1. Reposu klonlayın:
+```bash
+git clone https://github.com/azraksk/AI-RAG-Chatbot.git
+cd AI-RAG-Chatbot
 
 
 2. Gerekli kütüphaneleri yükleyin.
 pip install -r requirements.txt
 
 
-3. Streamlit uygulamasını çalıştırın:
+3. Kaggle API anahtarınızı bilgisayarınıza ekleyin:
+Kaggle’dan kaggle.json dosyasını indirin.
+Terminalde şu komutları çalıştırın:
+
+mkdir -p ~/.kaggle
+mv ~/Desktop/kaggle.json ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
+
+4. Streamlit uygulamasını çalıştırın:
 streamlit run app.py
 
-4. Jupyter Notebook’u çalıştırmak için:
+5. Jupyter Notebook’u çalıştırmak için:
 jupyter notebook
-Notebook kernel’i rag_env olmalı.
+Notebook kernel’i rag_env olmalıdır.
 
 
-📁 Dosya Yapısı
-akbank/
+
+📁 Dosya Yapısı:
+
+AI-RAG-Chatbot/
 │
-├─ app.py               # Streamlit uygulaması
-├─ AI-RAG-Notebook.ipynb         # Notebook
-├─ data/
-│   └─ Wikipedia_AI_Glossary.csv
-└─ README.md
+├── data/
+│   ├── Wikipedia_AI_Glossary.csv
+│   └── wikipedia-ai-glossary.zip
+│
+├── .gitignore
+├── AI-RAG-Notebook.ipynb
+├── README.md
+├── app.ipynb
+├── app.py
+└── requirements.txt
 
 
 Web Uygulaması: https://ai-rag-chatbot-yusraazrademirel.streamlit.app
