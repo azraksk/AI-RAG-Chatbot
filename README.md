@@ -63,6 +63,7 @@ Notebook kernel’i rag_env olmalıdır.
 
 📁 Dosya Yapısı:
 
+```bash
 AI-RAG-Chatbot/
 ├── data/
 │   ├── Wikipedia_AI_Glossary.csv
@@ -73,7 +74,7 @@ AI-RAG-Chatbot/
 ├── app.ipynb
 ├── app.py
 └── requirements.txt
-
+```
 
 
 Web Uygulaması: https://ai-rag-chatbot-yusraazrademirel.streamlit.app
