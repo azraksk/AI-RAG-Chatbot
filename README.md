@@ -61,21 +61,19 @@ jupyter notebook
 Notebook kernel’i rag_env olmalıdır.
 
 
-
 📁 Dosya Yapısı:
 
 AI-RAG-Chatbot/
-│
 ├── data/
 │   ├── Wikipedia_AI_Glossary.csv
 │   └── wikipedia-ai-glossary.zip
-│
 ├── .gitignore
 ├── AI-RAG-Notebook.ipynb
 ├── README.md
 ├── app.ipynb
 ├── app.py
 └── requirements.txt
+
 
 
 Web Uygulaması: https://ai-rag-chatbot-yusraazrademirel.streamlit.app
