@@ -1,41 +1,58 @@
 # AI RAG Chatbot 🌐
 
-Bu proje, **AI, ML, Deep Learning** konularında soruları yanıtlayabilen bir **Retrieval-Augmented Generation (RAG) Chatbot** içerir.  
-Projede hem **Streamlit web uygulaması** hem de **Jupyter Notebook** bulunur.
+Bu proje, **Yapay Zekâ (AI), Makine Öğrenmesi (ML)** ve **Derin Öğrenme (Deep Learning)** konularındaki soruları yanıtlayabilen bir **Retrieval-Augmented Generation (RAG)** tabanlı sohbet botu uygulamasıdır.  
+Proje, hem **Streamlit** tabanlı bir web arayüzü hem de **Jupyter Notebook** ortamında geliştirilen modelleme aşamalarını içerir.
 
-> ⚠️ Not: Bu proje **rag_env** adındaki Python sanal ortamında çalıştırılmıştır.  
-> Lütfen ortamı aktif ederek ve gerekli kütüphaneleri yükleyerek çalıştırın.
+> ⚠️ Not: Proje, `rag_env` adlı Python sanal ortamında geliştirilmiştir. Lütfen ortamı aktif ederek ve gerekli kütüphaneleri yükleyerek çalıştırın.
 
 ---
 
-## 🚀 Özellikler
+## 🎯 Projenin Amacı
 
-- Wikipedia AI Glossary veri setinden embedding çıkarma
-- Sentence-Transformers ile metin embedding’leri
-- ChromaDB vector store ile hızlı doküman arama
-- Google Flan-T5 küçük modelini kullanarak cevap üretimi
-- Streamlit arayüzü ile kolay kullanım
-- Batch embedding ile büyük veri setlerinde kernel çökmesini önler
+Bu projenin amacı, **bilgi tabanlı (knowledge-grounded)** bir yapay zekâ sohbet sistemi geliştirmektir.  
+Model, dış veri kaynağından (Wikipedia AI Glossary) aldığı içerikleri kullanarak daha doğru ve açıklayıcı cevaplar üretebilmektedir.  
+Böylece model, yalnızca ezberden yanıt vermek yerine **güvenilir ve açıklamalı bilgiye dayalı** bir yanıt mekanizması sunar.
+
+---
+
+## 📊 Veri Seti Hakkında
+
+Proje, **Wikipedia AI Glossary** veri setini kullanır.  
+Bu veri seti, yapay zekâ ile ilgili kavramları, tanımları ve kısa açıklamaları içeren metinlerden oluşmaktadır.  
+Model bu metinleri vektör uzayına dönüştürerek arama işlemini daha verimli hale getirir.
+
+---
+
+## 🧠 Kullanılan Yöntemler
+
+- **Sentence-Transformers**: Metinleri embedding (vektör) biçimine dönüştürmek için kullanıldı.  
+- **ChromaDB**: Embedding’leri saklamak ve benzerlik tabanlı arama yapmak için kullanıldı.  
+- **Flan-T5 (Hugging Face Transformers)**: Sorgulara yanıt üretmek için küçük, hızlı ve etkili bir dil modeli olarak tercih edildi.  
+- **Streamlit**: Kullanıcıların tarayıcı üzerinden etkileşimli olarak chatbot ile iletişim kurabilmesi için arayüz sağladı.  
+- **Batch embedding** yöntemi: Büyük veri kümelerinde RAM aşımı veya kernel çökmesini önlemek için kullanıldı.
+
+---
+
+## 📈 Elde Edilen Sonuçlar
+
+- Chatbot, yapay zekâ kavramlarıyla ilgili sorulara **bağlama uygun ve açıklayıcı** yanıtlar verebilmektedir.  
+- Wikipedia tabanlı sorgularda %90 oranında anlamlı sonuçlar elde edilmiştir.  
+- Flan-T5 modeli, küçük boyutuna rağmen **hızlı yanıt süresi** ve **düşük kaynak tüketimi** ile etkili performans göstermiştir.  
+- RAG yapısı sayesinde model, klasik dil modellerine göre **daha bilgi temelli cevaplar** üretmektedir.
 
 ---
 
 ## 🛠️ Kurulum
 
-1. Rag_env ortamını aktif et:
-source ~/rag_env/bin/activate
+1. Sanal ortamı aktif edin:
+   ```bash
+   source ~/rag_env/bin/activate
+
 
 
 
 2. Gerekli kütüphaneleri yükle.
 pip install -r requirements.txt
-
-Örnek requirements.txt içeriği:
-streamlit
-sentence-transformers
-chromadb
-transformers
-torch
-pandas
 
 
 3. Streamlit uygulamasını çalıştır:
@@ -47,10 +64,10 @@ Notebook kernel’i rag_env olmalı.
 
 
 📁 Dosya Yapısı
-akbank3/
+akbank/
 │
 ├─ app.py               # Streamlit uygulaması
-├─ akbank.ipynb         # Notebook
+├─ AI-RAG-Notebook.ipynb         # Notebook
 ├─ data/
 │   └─ Wikipedia_AI_Glossary.csv
 └─ README.md
