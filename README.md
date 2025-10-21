@@ -54,9 +54,8 @@ Problem: Kullanıcının AI ile ilgili teknik terim sorularına doğal dilde do�
 
 ## 🖥️ Uygulama Demo
 
-![Chatbot Demo](assets/demo.gif)
+![Demo](assets/demo.gif)
 
-![Uploading EkranKayd2025-10-2123.08.41-ezgif.com-video-to-gif-converter.gif…]()
 
 ## 🛠️ Kurulum
 
