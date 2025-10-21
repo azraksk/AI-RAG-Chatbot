@@ -5,8 +5,11 @@ Bu proje, Wikipedia AI Glossary veri setini kullanarak bir **Retrieval-Augmented
 
 ## Geliştirme Ortamı
 **Github:** AI-RAG Chatbot
+
 **Programlama Dili:** Python 3.x
+
 **Kütüphaneler:** streamlit, pandas, sentence-transformers, chromadb, transformers, openai, vb.
+
 **Sanal Ortam:** rag_env (virtualenv)
 
 ## Veri Seti
