@@ -3,16 +3,31 @@
 ## Projenin Amacı
 Bu proje, Wikipedia AI Glossary veri setini kullanarak bir **Retrieval-Augmented Generation (RAG) Chatbot** oluşturmayı amaçlamaktadır. Kullanıcı sorularını doğal dilde yanıtlamak ve teknik terimler hakkında bilgi vermek hedeflenmiştir.
 
+## Geliştirme Ortamı
+**Github:** AI-RAG Chatbot
+**Programlama Dili:** Python 3.x
+**Kütüphaneler:** streamlit, pandas, sentence-transformers, chromadb, transformers, openai, vb.
+**Sanal Ortam:** rag_env (virtualenv)
+
 ## Veri Seti
 Kullanılan veri seti: [Wikipedia AI Glossary](https://www.kaggle.com/datasets/antoinebourgois2/wikipedia-ai-glossary)  
-- Veri seti, yapay zekâ ile ilgili terimlerin açıklamalarını içerir.  
-- Projede veri seti **GitHub reposuna eklenmemiştir**, uygulama çalıştırılırken Kaggle API üzerinden indirilmektedir.
+Veri seti, yapay zekâ ile ilgili terimlerin açıklamalarını içerir.
+**Toplama/Hazırlama:** Hazır veri seti kullanılmıştır; ek veri toplama veya temizleme yapılmamıştır.
+**Kullanım:** Uygulama çalıştırılırken Kaggle API üzerinden indirilir, GitHub reposuna eklenmez.
 
 ## Kullanılan Yöntemler
 - **Embedding Oluşturma:** Wikipedia AI Glossary’den alınan metinler vektör uzayına dönüştürülür.  
 - **Retrieval (Sorgulama) Mekanizması:** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler bulunur.  
 - **OpenAI API ile Yanıt Üretme:** Seçilen terim açıklamaları kullanılarak doğal dil yanıtı üretilir.  
 - **Streamlit Kullanımı:** Chatbot arayüzü Streamlit ile hazırlanmıştır.  
+
+## Çözüm Mimarisi
+Problem: Kullanıcının AI ile ilgili teknik terim sorularına doğal dilde doğru yanıt vermek.
+**Mimari:**
+**Embedding Oluşturma:** Wikipedia AI Glossary metinleri embedding’e dönüştürülür.
+**Retrieval (Sorgulama):** Kullanıcının sorusu embedding’e dönüştürülür ve veri setindeki en benzer terimler seçilir.
+**Yanıt Üretme:** OpenAI API kullanılarak doğal dil yanıtı oluşturulur.
+**Web Arayüzü:** Streamlit ile kullanıcı etkileşimi sağlanır.
 
 ## Elde Edilen Sonuçlar
 - Kullanıcı sorularına doğru ve anlamlı yanıtlar üretebilen bir chatbot oluşturulmuştur.  
