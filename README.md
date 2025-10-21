@@ -68,3 +68,6 @@ akbank/
 ├─ data/
 │   └─ Wikipedia_AI_Glossary.csv
 └─ README.md
+
+
+Web Uygulaması: https://ai-rag-chatbot-yusraazrademirel.streamlit.app
